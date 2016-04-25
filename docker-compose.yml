@@ -2,14 +2,16 @@ version: '2'
 services:
   gameroom:
     build: 
-      context: ./gameroom
+      context: gameroom/
+      dockerfile: Dockerfile
     ports:
       - "3334:3334"
   shapeshift:
     build: 
-      context: ./shapeshift
+      context: shapeshift/
+      dockerfile: Dockerfile
       args:
-        GAMEROOM_HOST: "ec2-52-33-37-182.us-west-2.compute.amazonaws.com"
+        GAMEROOM_HOST: "ec2-52-39-48-191.us-west-2.compute.amazonaws.com"
         # GAMEROOM_HOST: "192.168.99.100"
     ports:
       - "8001:8001"
