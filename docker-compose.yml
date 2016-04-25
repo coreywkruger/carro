@@ -9,7 +9,8 @@ services:
     build: 
       context: ./shapeshift
       args:
-        GAMEROOM_HOST: "192.168.99.100"
+        GAMEROOM_HOST: "ec2-52-33-37-182.us-west-2.compute.amazonaws.com"
+        # GAMEROOM_HOST: "192.168.99.100"
     ports:
       - "8001:8001"
     links:
