@@ -1,0 +1,16 @@
+version: '2'
+services:
+  gameroom:
+    build: 
+      context: ./gameroom
+    ports:
+      - "3334:3334"
+  shapeshift:
+    build: 
+      context: ./shapeshift
+      args:
+        GAMEROOM_HOST: "192.168.99.100"
+    ports:
+      - "8001:8001"
+    links:
+      - gameroom
