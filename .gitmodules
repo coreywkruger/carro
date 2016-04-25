@@ -1,0 +1,6 @@
+[submodule "shapeshift"]
+	path = shapeshift
+	url = git@gitlab.com:coreywkruger/shapeshift.git
+[submodule "gameroom"]
+	path = gameroom
+	url = git@gitlab.com:coreywkruger/gameroom.git
